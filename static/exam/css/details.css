@@ -1,0 +1,26 @@
+#exam_question{
+    height:250px;
+    width:500px;
+    position: relative;
+    left: 30%;
+    top: 30%;
+    border: 5px solid gray;
+}
+
+#submit_ok{
+    margin-top:10px;
+    margin-left:40px;
+}
+
+#exam_question #heading{
+    font-family: cursive;
+    font-size: 25;
+}
+
+label{
+    font-size:20;
+}
+
+body{
+    background:silver;
+}

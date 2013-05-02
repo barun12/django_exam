@@ -1,0 +1,9 @@
+{% if questions_list %}
+    <ul>
+    {% for q in questions_list %}
+        <li>{{ q.question }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Questions are available.</p>
+{% endif %}

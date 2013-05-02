@@ -1,0 +1,24 @@
+<html>
+    <title>Exam Paper</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/details.css">
+    </head>
+    <body>
+        <div id="exam_question">
+            {% if question %}
+                <div id="heading">{{ question }}</div>
+
+                <form id="options" action="/exam/{{ question.id }}/check/" method="post">
+                    {% csrf_token %}
+                    {% for choice in choice_set %}
+                        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice }}" />
+                        <label>{{ choice }}</label><br />
+                    {% endfor %}
+                    <input id"submit_ok" type="submit" value="Answer" />
+                </form>
+            {% else %}
+                <div id="heading">{{ message }}</div>
+            {% endif %}
+        </div>
+    </body>
+</html>
